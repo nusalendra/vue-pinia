@@ -4,5 +4,10 @@ export const useCounterStore = defineStore({
     id: "counter",
     state: () => ({
         count: 0
-    })
+    }),
+    getters: {
+        getCount: (state) => state.count,
+        doubleCount: (state) => state.count * 2,
+        dividedBy: (state) => (divisor) => state.count / divisor
+    }
 })
