@@ -9,5 +9,20 @@ export const useCounterStore = defineStore({
         getCount: (state) => state.count,
         doubleCount: (state) => state.count * 2,
         dividedBy: (state) => (divisor) => state.count / divisor
+    },
+
+    actions: {
+        increment() {
+            this.count++;
+        },
+        decrement() {
+            this.count--;
+        },
+        incrementBy(number) {
+            this.count += number;
+        },
+        decrementBy(number) {
+            this.count -= number;
+        },
     }
 })
